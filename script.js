@@ -22,8 +22,19 @@ function setSize(){
 
 function clearCanvas()  {
   const getSize = document.querySelector("#size");
+  const modal = document.querySelector("#modal");
   size = parseInt(getSize.value);
-  generateCanvas(size);
+
+  modal.style.display = "flex";
+
+  document.querySelector("#yes").addEventListener("click", () => {
+    generateCanvas(size);
+    modal.style.display = "none";
+  })
+
+  document.querySelector("#no").addEventListener("click", () => {
+    modal.style.display = "none";
+  })
 }
 
 function generateCanvas(size) {

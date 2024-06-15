@@ -1,121 +1,147 @@
-body{
-    display: flex;
-    justify-content: center; 
-    gap: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #98D4BB; 
+body {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #98d4bb;
 }
 
-#container{
-    border: 2px solid gray;
-    width: 560px;
-    height: 560px;
-    display: grid;
-    border-radius: 8px;
-    background-color: white;
+#container {
+  border: 2px solid gray;
+  width: 560px;
+  height: 560px;
+  display: grid;
+  border-radius: 8px;
+  background-color: white;
+}
+
+#controller {
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 240px;
+}
+
+#canvasSize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  background-color: #e5dbd9;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#canvasSize button {
+  width: 60px;
+  padding: 8px;
+  background-color: #beb4c5;
+  border: none;
+  border-radius: 8px;
+}
+
+#canvasSize input {
+  width: 100px;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#clearCanvas {
+  background-color: #eb96aa;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  color: black;
+}
+
+#color {
+  background-color: palegoldenrod;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chooseColor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.chooseColor button {
+  padding: 20px 0 20px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#green {
+  background-color: green;
+}
+
+#black {
+  background-color: black;
+}
+
+#white {
+  background-color: white;
+}
+
+#download {
+  background-color: #218b82;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+}
+
+#modal {
+  background-color: #beb4c5;
+  width: 300px;
+  height: 100px;
+  position: fixed;
+  top: 30%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
 
 }
 
-#controller{
-    padding: 20px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 240px;
-}
 
-#canvasSize{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
-    background-color: #E5DBD9;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-#canvasSize button{
-    width: 60px;
-    padding: 8px;
-    background-color: #BEB4C5;
+#modal .button{
+    padding: 8px 20px;
     border: none;
     border-radius: 8px;
 }
 
-#canvasSize input{
-    width: 100px;
-    border: none;
-    padding: 8px;
-    border-radius: 8px;
+#modal #yes{
+    background-color: #eb96aa;
 }
 
-#clearCanvas{
-    background-color: #EB96AA;
-    border: none;
-    padding: 8px;
-    border-radius: 8px;
-    color: black;
-
-}
-
-#color{
-    background-color: palegoldenrod;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}   
-
-.chooseColor{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    width: 200px;
-    margin: 10px;
-    padding: 10px;
-}
-
-.chooseColor button{
-    padding: 20px 0 20px 0;
-    border: none;
-    border-radius: 8px;
-}
-
-
-#red{
-    background-color: red;
-}
-
-#blue{
-    background-color: blue;
-}
-
-#yellow{
-    background-color: yellow;
-}
-
-#green{
- background-color: green;
-}
-
-#black{
- background-color: black;
-}
-
-#white{
- background-color: white;
-}
-
-
-#download{
-    background-color: #218B82;
-    color: white;
-    padding: 8px;
-    border: none;
-    border-radius: 8px;
+#modal #no{
+    background-color: gray;
 }
