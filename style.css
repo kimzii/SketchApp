@@ -1,0 +1,121 @@
+body{
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #98D4BB; 
+}
+
+#container{
+    border: 2px solid gray;
+    width: 560px;
+    height: 560px;
+    display: grid;
+    border-radius: 8px;
+    background-color: white;
+
+}
+
+#controller{
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 240px;
+}
+
+#canvasSize{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    background-color: #E5DBD9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#canvasSize button{
+    width: 60px;
+    padding: 8px;
+    background-color: #BEB4C5;
+    border: none;
+    border-radius: 8px;
+}
+
+#canvasSize input{
+    width: 100px;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#clearCanvas{
+    background-color: #EB96AA;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    color: black;
+
+}
+
+#color{
+    background-color: palegoldenrod;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
+.chooseColor{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.chooseColor button{
+    padding: 20px 0 20px 0;
+    border: none;
+    border-radius: 8px;
+}
+
+
+#red{
+    background-color: red;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#green{
+ background-color: green;
+}
+
+#black{
+ background-color: black;
+}
+
+#white{
+ background-color: white;
+}
+
+
+#download{
+    background-color: #218B82;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+}

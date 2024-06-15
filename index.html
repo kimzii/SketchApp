@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SketchApp</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <div id="controller">
+      <div id="canvasSize">
+        <h4>Set Pixel Size: </h4>
+        <input type="number" id="size" value="16" min="16" />
+        <button onclick="setSize()">Apply</button>
+      </div>
+
+      <div id="color">
+        <h4>Choose your Color</h4>
+        <div class="chooseColor">
+          <button id="red" ></button>
+          <button id="blue"></button>
+          <button id="yellow"></button>
+          <button id="green"></button>
+          <button id="black"></button>
+          <button id="white"></button>
+          <input type="color" id="colorPicker" value="#000000">
+        </div>
+
+        <div>
+          <button id="clearCanvas" onclick="clearCanvas()">Clear Canvas</button>
+        </div>
+      </div>
+
+      
+
+      <div>
+        <button id="download">Download Drawing</button>
+      </div>
+    </div>
+
+  </body>
+  <script src="./script.js"></script>
+</html>
