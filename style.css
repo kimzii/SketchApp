@@ -108,6 +108,10 @@ body {
   background-color: white;
 }
 
+#rainbow{
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
 #download {
   background-color: #218b82;
   color: white;

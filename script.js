@@ -2,11 +2,17 @@ const canvas = document.querySelector("#container");
 let size = 16;
 let isMouseDown = false;
 let currentColor = 'black'; 
+let rainbowMode = false; 
 
 function setColor(color) {
   const colorPickerColor = document.querySelector("#colorPicker");
   colorPickerColor.value = color;
   currentColor = color;
+  rainbowMode = false; 
+}
+
+function setRainbowMode() {
+  rainbowMode = true; 
 }
 
 function setSize(){
@@ -37,6 +43,16 @@ function clearCanvas()  {
   })
 }
 
+function generateRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
 function generateCanvas(size) {
     canvas.innerHTML = '';
 
@@ -48,12 +64,12 @@ function generateCanvas(size) {
 
             pixel.addEventListener("mouseover", function() {
               if (isMouseDown) {
-                pixel.style.backgroundColor = currentColor;
+                pixel.style.backgroundColor = rainbowMode ? generateRandomColor() : currentColor;
               }
             });
       
             pixel.addEventListener("mousedown", function() {
-              pixel.style.backgroundColor = currentColor;
+              pixel.style.backgroundColor = rainbowMode ? generateRandomColor() : currentColor;
             });
         }
     }
@@ -81,6 +97,7 @@ document.getElementById("white").addEventListener("click", () => setColor('#FFFF
 document.querySelector("#colorPicker").addEventListener("change", (e) => {
   setColor(e.target.value);
 });
+document.getElementById("rainbow").addEventListener("click", setRainbowMode);
 
 
 function drawGridOnCanvas() {
